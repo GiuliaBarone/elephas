@@ -123,6 +123,7 @@ class SparkModel(object):
     def predict_classes(self, data):
         """ Predict classes for a numpy array of features
         """
+        print("modello predict_classes", self.master_network)
         return self.master_network.predict_classes(data)
 
     def fit(self, rdd, epochs=10, batch_size=32,
